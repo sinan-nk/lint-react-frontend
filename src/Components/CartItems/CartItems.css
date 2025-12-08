@@ -1,0 +1,248 @@
+.cartitems{
+    margin: 100px 170px;
+     
+}
+
+.cartitems hr{
+    height: 3px ;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.cartitems-format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items:center ;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.cartitems-format{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.carticon-product-icon{
+    height: 62px;
+}
+
+.cartitems-remove-icon{
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+
+}
+.cartitems-quantity{
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background-color: #fff;
+}
+
+.cartitems-down{
+    display:flex;
+    margin: 100px 0px;
+}
+
+.cartitems-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cartitems-total-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button{
+    width: 260px;
+    height: 58px;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #ff5858, #ff3b3b);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cartitems-total button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(255, 70, 70, 0.35);
+}
+
+
+.cartitems-promobox{
+    width: 504px;
+    height: 58px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cartitems-promobox input{
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding-left: 18px;
+    font-size: 16px;
+    color: #222;
+}
+
+.cartitems-promobox button{
+    width: 150px;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cartitems-promobox button:hover{
+    background: #333;
+}
+
+
+@media(max-width:1280px){
+    .cartitems{
+        margin: 80px 120px;
+    }
+    .cartitems-format-main{
+        gap: 40px;
+        font-size: 16px;
+    }
+    .cartitems-total{
+        margin-right: 120px;
+    }
+    .cartitems-promobox{
+        width: 450px;
+    }
+    .cartitems-promobox input{
+        width: 280px;
+    }
+}
+
+
+@media(max-width:1024px){
+    .cartitems{
+        margin: 70px 80px;
+    }
+    .cartitems-format-main{
+        grid-template-columns: 0.7fr 2fr 1fr 1fr;
+        gap: 25px;
+        font-size: 15px;
+    }
+    .cartitems-remove-icon{
+        margin: 0px 20px;
+    }
+    .cartitems-down{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .cartitems-total{
+        margin-right: 0px;
+    }
+    .cartitems-promobox{
+        width: 100%;
+    }
+    .cartitems-promobox input{
+        width: 60%;
+    }
+    .cartitems-promobox button{
+        width: 40%;
+    }
+}
+
+
+@media(max-width:800px){
+    .cartitems{
+        margin: 70px 40px;
+    }
+    .cartitems-format-main{
+        grid-template-columns: 1fr 1.5fr 1fr;
+        gap: 18px;
+        font-size: 14px;
+    }
+    .carticon-product-icon{
+        height: 50px;
+    }
+    .cartitems-quantity{
+        width: 55px;
+        height: 45px;
+    }
+    .cartitems-total button{
+        width: 220px;
+        height: 52px;
+    }
+    .cartitems-promobox input{
+        width: 55%;
+        font-size: 15px;
+    }
+    .cartitems-promobox button{
+        width: 45%;
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width:500px){
+    .cartitems{
+        margin: 60px 20px;
+    }
+    .cartitems-format-main{
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cartitems-remove-icon{
+        margin: 0;
+    }
+    .cartitems-quantity{
+        width: 50px;
+        height: 40px;
+    }
+    .cartitems-down{
+        margin: 60px 0px;
+    }
+    .cartitems-total{
+        width: 100%;
+        gap: 25px;
+    }
+    .cartitems-total button{
+        width: 100%;
+        height: 50px;
+        font-size: 15px;
+    }
+    .cartitems-promobox{
+        width: 100%;
+        padding-left: 10px;
+        height: 55px;
+    }
+    .cartitems-promobox input{
+        width: 55%;
+        height: 45px;
+        font-size: 14px;
+    }
+    .cartitems-promobox button{
+        width: 45%;
+        height: 55px;
+        font-size: 14px;
+    }
+}
