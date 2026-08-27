@@ -1,78 +1,83 @@
-.item{
-    width:280px;
-}
-.item img{
-    width:280px;
-}
-.item p{
-    margin:6px 0px;
-
+.item {
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
 }
 
-.item-prices{
+.item:hover {
+    transform: translateY(-6px);
+}
+
+.item-img-wrap {
+    position: relative;
+    width: 280px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f4f4f4;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.item:hover img {
+    transform: scale(1.08);
+}
+
+
+
+.item:hover {
+    transform: translateY(0);
+}
+
+.item p {
+    margin: 14px 0px 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #b1b0b0;
+    letter-spacing: 0.01em;
+}
+
+.item-prices {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
 }
 
-.item-price-new{
-    color:#374151;
-    font-size: 18;
-    font-weight:600;
+.item-price-new {
+    color: #d1cece;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.item-price-old{
-    color:#8c8c8c;
-    font-size:18px;
-    font-weight:500;
+.item-price-old {
+    color: #717070;
+    font-size: 14px;
+    font-weight: 400;
     text-decoration: line-through;
 }
 
-.item:hover{
-    transform:scale(1.05);
-    transition: 0.6s;
-}
+/* ---------- responsive ---------- */
 @media(max-width:1280px){
-    .item{
-        width: 220px;
-        font-size: 14px;
-    }
-    .item img{
-        width:220px;
-    }
-    .item-price-old{
-        font-size: 14px;
-    }
+    .item, .item-img-wrap { width: 220px; }
+    .item { font-size: 14px; }
+    .item-price-old{ font-size: 13px; }
 }
 @media(max-width:1024px){
-    .item{
-        width:170px;
-        font-size: 13px;
-    }
-    .item img{
-        width:170px ;
-    }
-    .item-price-old{
-        font-size:13px;
-    }
+    .item, .item-img-wrap { width: 170px; }
+    .item { font-size: 13px; }
+    .item-price-old{ font-size: 12px; }
 }
 @media(max-width:800px){
-    .item{
-        width:120px;
-        font-size: 12px;
-    }
-    .item img{
-        width:120px ;
-    }
-    .item-price-old{
-        font-size:12px;
-    }
+    .item, .item-img-wrap { width: 120px; }
+    .item { font-size: 12px; }
+    .item-price-old{ font-size: 11px; }
 }
 @media(max-width:500px){
-    .item{
-        width:160px;
-    }
-    .item img{
-        width:160px ;
-    }
-   
+    .item, .item-img-wrap { width: 160px; }
 }

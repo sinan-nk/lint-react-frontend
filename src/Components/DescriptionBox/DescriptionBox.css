@@ -1,30 +1,61 @@
 .descriptionbox{
-    margin: 120px  170px;
+    margin: 120px 170px;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
 }
+
 .descriptionbox-navigator{
     display: flex;
+    border-bottom: 1px solid #e2e2e2;
 }
+
 .descriptionbox-nav-box{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:16px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
     width: 171px;
-    height: 70px;
-    border: 1px solid #d0d0d0;
+    height: 64px;
+    color: #9b9999;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.25s ease;
 }
-.descriptionbox-nav-box.fade{
-    background: #fbfbfb;
-    color: #555;
+
+.descriptionbox-nav-box:hover{
+    color: #514f4f;
 }
+
+.descriptionbox-nav-box.active{
+    color: #131313;
+    font-weight: 600;
+}
+
+.descriptionbox-nav-box.active::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #060606;
+}
+
 .descriptionbox-description{
     display: flex;
-    flex-direction:column;
-    gap:25px;
-    border:1px solid #D0D0D0;
-    padding: 48px;
-    padding-bottom: 70px;   
+    flex-direction: column;
+    gap: 22px;
+    padding: 48px 4px 70px;
+    color: #868686;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 760px;
+    animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -34,11 +65,11 @@
     }
     .descriptionbox-nav-box{
         width: 150px;
-        height: 60px;
-        font-size: 15px;
+        height: 58px;
+        font-size: 14px;
     }
     .descriptionbox-description{
-        padding: 40px;
+        padding: 40px 4px;
     }
 }
 
@@ -50,11 +81,11 @@
     }
     .descriptionbox-nav-box{
         width: 140px;
-        height: 55px;
+        height: 52px;
         font-size: 14px;
     }
     .descriptionbox-description{
-        padding: 30px;
+        padding: 30px 4px;
     }
 }
 
@@ -69,12 +100,12 @@
     }
     .descriptionbox-nav-box{
         width: 48%;
-        height: 50px;
+        height: 48px;
         font-size: 14px;
     }
     .descriptionbox-description{
-        padding: 25px;
-        gap: 20px;
+        padding: 25px 4px;
+        gap: 18px;
     }
 }
 
@@ -85,11 +116,11 @@
     }
     .descriptionbox-nav-box{
         width: 100%;
-        height: 45px;
+        height: 44px;
         font-size: 13px;
     }
     .descriptionbox-description{
-        padding: 20px;
-        gap: 15px;
+        padding: 20px 4px;
+        gap: 14px;
     }
 }

@@ -14,7 +14,7 @@ import kids_banner from './Components/Assets/banner_kids.png'
 
 function App() {
   return (
-    <>
+    <div className='App' style={{height:'100%'}}>
     <BrowserRouter>
     <Navbar/>
     <Routes>
@@ -28,10 +28,10 @@ function App() {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/login' element={<LoginSignUp/>}/>
     </Routes>
-    <Footer/>
+    {/* <Footer/> */}
     </BrowserRouter>
       
-    </>
+    </div>
   );
 }
 
