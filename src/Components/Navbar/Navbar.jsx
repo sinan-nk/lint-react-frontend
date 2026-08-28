@@ -1,18 +1,36 @@
-import React, { useContext, useRef, useState } from 'react';
-import './Navbar.css';
-import { Link } from 'react-router-dom';
-import { ShopContext } from '../../Context/ShopContext';
+import React, { useContext, useRef, useEffect } from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState('shop');
-  const [companyOpen, setCompanyOpen] = useState(false);
   const { getTotalCartItems } = useContext(ShopContext);
   const menuRef = useRef();
+  const toggleRef = useRef();
 
   const dropdown_toggle = (e) => {
-    menuRef.current.classList.toggle('nav-menu-visible');
-    e.target.classList.toggle('open');
+    menuRef.current.classList.toggle("nav-menu-visible");
+    e.target.classList.toggle("open");
   };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        toggleRef.current &&
+        !toggleRef.current.contains(e.target)
+      ) {
+        menuRef.current.classList.remove("nav-menu-visible");
+        toggleRef.current.classList.remove("open");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="navbar">
@@ -22,25 +40,25 @@ const Navbar = () => {
         </Link>
       </div>
 
-    <svg
-  className="nav-dropdown"
-  onClick={dropdown_toggle}
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  strokeWidth="2"
->
-  <path d="M6 9l6 6 6-6" />
-</svg>
+      <svg
+        ref={toggleRef}
+        className="nav-dropdown"
+        onClick={dropdown_toggle}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
 
       <ul ref={menuRef} className="nav-menu">
-        <li onClick={() => setMenu('mens')}>
+        <li>
           <Link to="/mens">Men</Link>
         </li>
-        <li onClick={() => setMenu('womens')}>
+        <li>
           <Link to="/womens">Women</Link>
         </li>
-        <li onClick={() => setMenu('kids')}>
+        <li>
           <Link to="/kids">Kids</Link>
         </li>
       </ul>
@@ -69,7 +87,13 @@ const Navbar = () => {
 
         <Link to="/login" className="nav-icon-btn">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="8" r="3.5" stroke="currentColor" strokeWidth="2" />
+            <circle
+              cx="12"
+              cy="8"
+              r="3.5"
+              stroke="currentColor"
+              strokeWidth="2"
+            />
             <path
               d="M4.5 20c1.4-3.4 4.3-5.5 7.5-5.5s6.1 2.1 7.5 5.5"
               stroke="currentColor"

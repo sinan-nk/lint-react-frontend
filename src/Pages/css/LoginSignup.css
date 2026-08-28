@@ -48,7 +48,7 @@
 }
 
 .loginsignup-fields input{
-    width: 100%;
+    width: 90%;
     height: 54px;
     padding: 0 18px;
     border: 1px solid #3a352c;
@@ -142,14 +142,177 @@
     cursor: pointer;
 }
 
+/* ---------- Large laptops / small desktops ---------- */
+@media (max-width: 1200px){
+    .loginsignup{
+        padding: 70px 20px 90px;
+    }
+}
+
+/* ---------- Laptops ---------- */
+@media (max-width: 1024px){
+    .loginsignup-container{
+        width: 400px;
+        padding: 42px 36px;
+    }
+    .loginsignup-container h1{
+        font-size: 28px;
+    }
+}
+
+/* ---------- Tablets (landscape) ---------- */
+@media (max-width: 900px){
+    .loginsignup{
+        min-height: 70vh;
+        padding: 60px 18px 80px;
+    }
+    .loginsignup-container{
+        width: 420px;
+        padding: 38px 32px;
+    }
+}
+
+/* ---------- Tablets (portrait) ---------- */
+@media (max-width: 768px){
+    .loginsignup{
+        padding: 50px 16px 70px;
+    }
+    .loginsignup-container{
+         margin-top:40px ;
+        width: 100%;
+        max-width: 460px;
+        padding: 36px 28px;
+        border-radius: 14px;
+    }
+    .loginsignup-container h1{
+        font-size: 26px;
+    }
+    .loginsignup-fields{
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+    .loginsignup-fields input{
+        height: 50px;
+        font-size: 14.5px;
+    }
+    .loginsignup-container button{
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    .loginsignup{
+        padding: 30px 16px 50px;
+    }
+    .loginsignup-container{
+        margin-top: 50px;
+        padding: 25px 20px;
+        width: 430px;
+    }
+    .loginsignup-container h1{
+        font-size: 24px;
+    }
+    
+     .loginsignup-fields input{
+        height: 46px;
+        padding: 0 10px;
+        font-size: 14px;
+        width: 350px;
+    }
+    .loginsignup-container button{
+        height: 46px;
+        font-size: 14.5px;
+        margin-bottom: 18px;
+        width: 350px;
+    }
+    
+}
+
+/* ---------- Large phones ---------- */
 @media (max-width: 500px){
     .loginsignup{
         padding: 40px 16px 60px;
     }
     .loginsignup-container{
-        padding: 36px 24px;
+        padding: 34px 24px;
+         width: 300px;
     }
     .loginsignup-container h1{
         font-size: 24px;
+    }
+     .loginsignup-fields input{
+        height: 46px;
+        padding: 0 10px;
+        font-size: 14px;
+        width: 260px;
+    }
+    .loginsignup-container button{
+        height: 46px;
+        font-size: 14.5px;
+        margin-bottom: 18px;
+        width: 260px;
+    }
+}
+
+/* ---------- Standard phones ---------- */
+@media (max-width: 420px){
+    .loginsignup{
+        padding: 32px 12px 50px;
+        min-height: 65vh;
+    }
+    .loginsignup-container{
+        padding: 28px 18px;
+        border-radius: 12px;
+    }
+    .loginsignup-container h1{
+        font-size: 21px;
+    }
+    .loginsignup-divider{
+        margin: 14px 0 22px;
+    }
+    .loginsignup-fields{
+        gap: 14px;
+        margin-bottom: 20px;
+    }
+    .loginsignup-fields input{
+        height: 46px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+    .loginsignup-container button{
+        height: 46px;
+        font-size: 14.5px;
+        margin-bottom: 18px;
+    }
+    .loginsignup-login{
+        font-size: 13px;
+    }
+    .loginsignup-agree{
+        margin-top: 18px;
+        gap: 10px;
+        font-size: 12px;
+    }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 340px){
+    .loginsignup-container{
+        padding: 22px 14px;
+        width: 240px;
+        margin-top:100px ;
+    }
+    .loginsignup-container h1{
+        font-size: 19px;
+    }
+    .loginsignup-fields input{
+        height: 42px;
+        font-size: 13px;
+        width: 200px;
+    }
+    .loginsignup-container button{
+        height: 42px;
+        font-size: 14px;
+        width: 200px;
     }
 }
